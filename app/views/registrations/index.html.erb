@@ -1,0 +1,6 @@
+<h3>List of Registered Websites</h3>
+<p><%= link_to "Add New Site", new_registration_path %></p>
+
+<% @registrations.each do |registration| %>
+  <%= link_to registration.name, registration_path(registration.id), method: :get %><br>
+<% end %>

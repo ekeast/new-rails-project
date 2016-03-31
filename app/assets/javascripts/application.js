@@ -15,8 +15,3 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
-
-.jumbotron {
-  background-color: rgba(59, 185, 199, 0.49);
-  margin-left: 30px;
-}

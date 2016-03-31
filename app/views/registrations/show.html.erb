@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<h3><%= @registration.name %>'s Events</h3>
+
+<h5>Events</h5>
+
+<%= link_to "Add an Event", new_registration_event_path(@registration) %><br>
+
+<% @registration.events.each do |event| %>
+        <td><%= event.name %></td>
+<% end %>
