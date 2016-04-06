@@ -11,4 +11,4 @@
         <td><%= event.name %> </td>
 <% end %>
 
-<%= pie_chart @registration.events.group(:name).count %>
+<%= line_chart @registered_application.events.group_by_day(:created_at).count %>

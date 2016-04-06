@@ -23,6 +23,7 @@ gem 'pry'
 gem 'devise'
 gem 'faker'
 gem 'chartkick'
+gem 'groupdate'
 
 group :development, :test do
   gem 'byebug'
