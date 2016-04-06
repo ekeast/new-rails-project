@@ -10,3 +10,5 @@
 <% @registration.events.each do |event| %>
         <td><%= event.name %> </td>
 <% end %>
+
+<%= pie_chart @registration.events.group(:name).count %>
