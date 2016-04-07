@@ -10,5 +10,3 @@
 <% @registration.events.each do |event| %>
         <td><%= event.name %> </td>
 <% end %>
-
-<%= line_chart @registration.events.group_by_day(:created_at).count %>
