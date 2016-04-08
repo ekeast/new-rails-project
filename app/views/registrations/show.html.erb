@@ -7,4 +7,7 @@
 <%= link_to "Add an Event", new_registration_event_path(@registration) %><br>
 
 
- <%= line_chart @registration.events.group_by_hour(:created_at, :name).count %>
+ <%= line_chart [
+   { name: @registration.event.name, data: group_by_hour(:created_at)}
+ ]
+ @registration.events.group_by_hour(:created_at, :name).count %>
