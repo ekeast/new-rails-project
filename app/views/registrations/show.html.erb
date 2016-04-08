@@ -11,4 +11,4 @@
         <td><%= event.name %> </td>
 <% end %>
 
- <%= line_chart @registered_application.events.group_by_hour(:created_at).count %>
+ <%= line_chart @registration.events.group_by_hour(:created_at).count %>
