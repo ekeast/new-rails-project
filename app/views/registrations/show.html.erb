@@ -6,4 +6,4 @@
 
 <%= link_to "Add an Event", new_registration_event_path(@registration) %><br>
 
- <%= line_chart @registration.events.pluck("name").uniq.map { |c| { name: c, data: @registration.events.where(name: c).group_by_hour(:created_at).count} }, discrete: true %>
+ <%= line_chart @registration.events.pluck("name").uniq.map { |c| { name: c, data: @registration.events.where(name: c).group_by_hour(:created_at, format: day hour).count} }, discrete: true %>
